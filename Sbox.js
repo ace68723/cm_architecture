@@ -114,7 +114,7 @@ let writeAction = function () {
     if (err) {
       return console.log(err);
     }
-    let result = data.replace('Constants',`import ${projectName}Constants from '../Constants/${projectName}Constants';`);
+    let result = data.replace('Constants',`import ${projectName}Constants from '../${projectName}Constants/${projectName}Constants';`);
     result = result.replace('Module',`import ${projectName}${moduleName}Module from '../Modules/${projectName}${moduleName}Module/${projectName}${moduleName}Module';`);
     result = result.replace('Dispatch',`import {dispatch, register} from '../Dispatchers/${projectName}Dispatcher;'`);
     result = result.replace('Module.defaultFunc',`${projectName}${moduleName}Module.defaultFunc`);
@@ -161,7 +161,7 @@ let writeStore = function () {
     if (err) {
       return console.log(err);
     }
-    let result = data.replace('Constants',`import ${projectName}Constants from '../Constants/${projectName}Constants';`);
+    let result = data.replace('Constants',`import ${projectName}Constants from '../${projectName}Constants/${projectName}Constants';`);
     result = result.replace('Dispatch',`import {dispatch, register} from ../Dispatchers/${projectName}Dispatcher;`);
     result = result.replace('Store',`${projectName}${moduleName}Store`);
     result = result.replace('Store.updateState(action.data);',`${projectName}${moduleName}Store.updateState(action.data);`);
