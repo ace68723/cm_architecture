@@ -8,8 +8,8 @@ String.prototype.firstUpperCase=function(){
 }
 const actionPath = `Sbox/Actions`;
 const actionFile = `Sbox/Actions/${projectName}${moduleName.firstUpperCase()}Action.js`;
-const compoentPath = `Sbox/Compoents/${projectName}${moduleName.firstUpperCase()}`;
-const compoentFile = `Sbox/Compoents/${projectName}${moduleName.firstUpperCase()}/${projectName}${moduleName.firstUpperCase()}ViewController.js`;
+const compoentPath = `Sbox/Components/${projectName}${moduleName.firstUpperCase()}`;
+const compoentFile = `Sbox/Components/${projectName}${moduleName.firstUpperCase()}/${projectName}${moduleName.firstUpperCase()}ViewController.js`;
 const modulePath = `Sbox/Modules/${projectName}${moduleName.firstUpperCase()}Module`;
 const moduleFile = `Sbox/Modules/${projectName}${moduleName.firstUpperCase()}Module/${projectName}${moduleName.firstUpperCase()}Module.js`;
 const moduleAPIPath = `Sbox/Modules/${projectName}${moduleName.firstUpperCase()}Module`;
@@ -116,7 +116,7 @@ let writeAction = function () {
     }
     let result = data.replace('Constants',`import ${projectName}Constants from '../Constants/${projectName}Constants';`);
     result = result.replace('Module',`import ${projectName}${moduleName}Module from '../Modules/${projectName}${moduleName}Module/${projectName}${moduleName}Module';`);
-    result = result.replace('Dispatch',`import {dispatch, register} from ../Dispatchers/${projectName}Dispatcher;`);
+    result = result.replace('Dispatch',`import {dispatch, register} from '../Dispatchers/${projectName}Dispatcher;'`);
     result = result.replace('Module.defaultFunc',`${projectName}${moduleName}Module.defaultFunc`);
     result = result.replace('actionType',`actionType: ${projectName}Constants.DEFAULT_FUNC, data`);
 
