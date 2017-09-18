@@ -162,7 +162,7 @@ let writeStore = function () {
       return console.log(err);
     }
     let result = data.replace('Constants',`import ${projectName}Constants from '../${projectName}Constants/${projectName}Constants';`);
-    result = result.replace('Dispatch',`import {dispatch, register} from ../Dispatchers/${projectName}Dispatcher;`);
+    result = result.replace('Dispatch',`import {dispatch, register} from '../Dispatchers/${projectName}Dispatcher;'`);
     result = result.replace('Store',`${projectName}${moduleName}Store`);
     result = result.replace('Store.updateState(action.data);',`${projectName}${moduleName}Store.updateState(action.data);`);
     result = result.replace('Store.emitChange();',`${projectName}${moduleName}Store.emitChange();`);
