@@ -166,6 +166,8 @@ let writeStore = function () {
     result = result.replace('Store',`${projectName}${moduleName}Store`);
     result = result.replace('Store.updateState(action.data);',`${projectName}${moduleName}Store.updateState(action.data);`);
     result = result.replace('Store.emitChange();',`${projectName}${moduleName}Store.emitChange();`);
+    result = result.replace('module.exports = Store;',`module.exports = ${projectName}${moduleName}Store;`);
+
     fs.writeFile(storeFile, result, 'utf8', function(err) {
         if (err) {
            return console.log(err);

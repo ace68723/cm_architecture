@@ -39,4 +39,4 @@ const Store = Object.assign({},EventEmitter.prototype,{
 	})
 
 });
-module.exports = SboxAddressStore;
+module.exports = Store;
