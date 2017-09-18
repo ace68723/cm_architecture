@@ -16,7 +16,11 @@ const Store = Object.assign({},EventEmitter.prototype,{
 	removeChangeListener(callback) {
 			this.removeListener(CHANGE_EVENT, callback)
 	},
-  updateState(newState) {
+  updateState({iv_id, iv_name, iv_address}) {
+    const id = iv_id;
+    const name = iv_name;
+    const address = iv_address;
+    const newState = Object.assign({},{id, name, address});
     this.state = Object.assign({},this.state,newState);
   },
   getState(){
