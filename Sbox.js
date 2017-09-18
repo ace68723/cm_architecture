@@ -16,8 +16,8 @@ const moduleAPIPath = `Sbox/Modules/${projectName}${moduleName.firstUpperCase()}
 const moduleAPIFile = `Sbox/Modules/${projectName}${moduleName.firstUpperCase()}Module/${projectName}${moduleName.firstUpperCase()}API.js`;
 const storePath = `Sbox/Stores`;
 const storeFile = `Sbox/Stores/${projectName}${moduleName.firstUpperCase()}Store.js`;
-const dispatcherPath = `Sbox/Dispatcher`;
-const dispatcherFile = `Sbox/Dispatcher/${projectName}Dispatcher.js`;
+const dispatcherPath = `Sbox/Dispatchers`;
+const dispatcherFile = `Sbox/Dispatchers/${projectName}Dispatcher.js`;
 
 const allPath = [
                   {
