@@ -2,22 +2,22 @@ let fs = require('fs');
 let path = require('path');
 let basepath = './';
 let moduleName = process.argv.splice(2)[1];
-const projectName = 'cmDriver';
+const projectName = 'CmDriver';
 String.prototype.firstUpperCase=function(){
     return this.replace(/^\S/,function(s){return s.toUpperCase();});
 }
-const actionPath = `cmDriver/Actions`;
-const actionFile = `cmDriver/Actions/${projectName}${moduleName.firstUpperCase()}Action.js`;
-const compoentPath = `cmDriver/Components/${projectName}${moduleName.firstUpperCase()}`;
-const compoentFile = `cmDriver/Components/${projectName}${moduleName.firstUpperCase()}/${projectName}${moduleName.firstUpperCase()}ViewController.js`;
-const modulePath = `cmDriver/Modules/${projectName}${moduleName.firstUpperCase()}Module`;
-const moduleFile = `cmDriver/Modules/${projectName}${moduleName.firstUpperCase()}Module/${projectName}${moduleName.firstUpperCase()}Module.js`;
-const moduleAPIPath = `cmDriver/Modules/${projectName}${moduleName.firstUpperCase()}Module`;
-const moduleAPIFile = `cmDriver/Modules/${projectName}${moduleName.firstUpperCase()}Module/${projectName}${moduleName.firstUpperCase()}API.js`;
-const storePath = `cmDriver/Stores`;
-const storeFile = `cmDriver/Stores/${projectName}${moduleName.firstUpperCase()}Store.js`;
-const dispatcherPath = `cmDriver/Dispatchers`;
-const dispatcherFile = `cmDriver/Dispatchers/${projectName}Dispatcher.js`;
+const actionPath = `CmDriver/Actions`;
+const actionFile = `CmDriver/Actions/${projectName}${moduleName.firstUpperCase()}Action.js`;
+const compoentPath = `CmDriver/Components/${projectName}${moduleName.firstUpperCase()}`;
+const compoentFile = `CmDriver/Components/${projectName}${moduleName.firstUpperCase()}/${projectName}${moduleName.firstUpperCase()}ViewController.js`;
+const modulePath = `CmDriver/Modules/${projectName}${moduleName.firstUpperCase()}Module`;
+const moduleFile = `CmDriver/Modules/${projectName}${moduleName.firstUpperCase()}Module/${projectName}${moduleName.firstUpperCase()}Module.js`;
+const moduleAPIPath = `CmDriver/Modules/${projectName}${moduleName.firstUpperCase()}Module`;
+const moduleAPIFile = `CmDriver/Modules/${projectName}${moduleName.firstUpperCase()}Module/${projectName}${moduleName.firstUpperCase()}API.js`;
+const storePath = `CmDriver/Stores`;
+const storeFile = `CmDriver/Stores/${projectName}${moduleName.firstUpperCase()}Store.js`;
+const dispatcherPath = `CmDriver/Dispatchers`;
+const dispatcherFile = `CmDriver/Dispatchers/${projectName}Dispatcher.js`;
 
 const allPath = [
                   {
